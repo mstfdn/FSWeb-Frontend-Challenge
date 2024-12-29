@@ -3,30 +3,24 @@ import Skills from "./components/Skills";
 import Profile from "./components/Profile";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import { LanguageProvider, useLanguage } from "./context/LanguageContext";
-import { ThemeProvider, useTheme } from "./context/ThemeContext";
+import { LanguageProvider } from "./context/LanguageContext";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
-
   return (
-    <div>
-      <div className="container mx-auto p-6">
-        <Header />
-        <Skills />
-        <Profile />
-        <Projects />
-        <Footer />
-      </div>
+    <div className="container mx-auto p-6">
+      {/* Sağlayıcıları sadece burada kullanıyoruz */}
+      <ThemeProvider>
+        <LanguageProvider>
+          <Header />
+          <Skills />
+          <Profile />
+          <Projects />
+          <Footer />
+        </LanguageProvider>
+      </ThemeProvider>
     </div>
   );
 }
 
-export default function Root() {
-  return (
-    <ThemeProvider>
-      <LanguageProvider>
-        <App />
-      </LanguageProvider>
-    </ThemeProvider>
-  );
-}
+export default App;

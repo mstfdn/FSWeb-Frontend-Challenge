@@ -1,14 +1,12 @@
-import { useState } from "react";
+import { useTheme } from "../context/ThemeContext";
+import { useLanguage } from "../context/LanguageContext";
 import profilePic from "../assets/profile.jpg";
 import linkedinLogo from "../assets/linkedin-logo.png";
 import githubLogo from "../assets/github-logo.png";
 
-function Header() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [language, setLanguage] = useState("tr");
-
-  const toggleDarkMode = () => setDarkMode(!darkMode);
-  const toggleLanguage = () => setLanguage(language === "tr" ? "en" : "tr");
+const Header = () => {
+  const { darkMode, toggleDarkMode } = useTheme();
+  const { language, toggleLanguage } = useLanguage();
 
   return (
     <div
@@ -81,6 +79,6 @@ function Header() {
       </header>
     </div>
   );
-}
+};
 
 export default Header;

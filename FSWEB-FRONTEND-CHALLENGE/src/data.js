@@ -14,15 +14,9 @@ const data = {
     projects: [
       {
         title: "Random Jokes",
-        description: "A fun app for jokes",
+        description: "Pizza Project",
         tags: ["React", "Axios"],
-        links: { github: "https://github.com", app: "https://app.com" },
-      },
-      {
-        title: "Are You Bored?",
-        description: "An entertainment app",
-        tags: ["React", "Redux"],
-        links: { github: "https://github.com", app: "https://app.com" },
+        links: { github: "https://github.com/mstfdn/fsweb-s8-challenge-pizza", app: "https://teknolojik-yemekler.vercel.app/" },
       },
     ],
   };

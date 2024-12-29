@@ -1,23 +1,55 @@
+import { useTheme } from "../context/ThemeContext";
+import { useLanguage } from "../context/LanguageContext";
 
+const Footer = () => {
+  const { darkMode } = useTheme();
+  const { language } = useLanguage();
 
-function Footer() {
   return (
-    <footer className="p-4 text-center">
-      <p>Let’s work together on your next product.</p>
-      <div className="flex flex-col mt-4">
-        <a href="https://github.com" target="_blank">
+    <footer
+      className={`p-4 text-center ${
+        darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
+      }`}
+    >
+      <p className="mb-4">
+        {language === "tr"
+          ? "Gelin, bir sonraki ürününüz üzerinde birlikte çalışalım."
+          : "Let’s work together on your next product."}
+      </p>
+      <div className="flex flex-col mt-4 space-y-2">
+        <a
+          href="https://github.com/mstfdn"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500"
+        >
           GitHub
         </a>
-        <a href="https://blog.com" target="_blank">
-          Personal Blog
+        <a
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500"
+        >
+          {language === "tr" ? "Kişisel Blog" : "Personal Blog"}
         </a>
-        <a href="https://linkedin.com" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/mustafa-fidan-b65b12339/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500"
+        >
           LinkedIn
         </a>
-        <a href="mailto:email@example.com">Email</a>
+        <a
+          href="mailto:your-email@example.com"
+          className="text-blue-500"
+        >
+          {language === "tr" ? "E-posta" : "Email"}
+        </a>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
