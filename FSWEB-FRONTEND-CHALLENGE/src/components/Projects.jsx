@@ -1,18 +1,20 @@
+import data from '../data';
+import PropTypes from 'prop-types';
 
 
-// Proje kartı için bir bileşen oluşturuyoruz
-const ProjectCard = ({ title, description, languages, githubLink, appLink, image }) => {
+
+const ProjectCard = ({ title, description, tags, githubLink, appLink, image }) => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
       {/* Proje Başlığı */}
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       {/* Proje Açıklaması */}
       <p className="text-gray-700 mb-4">{description}</p>
-      {/* Kullanılan Diller */}
+      {/* Kullanılan Teknolojiler */}
       <div className="flex space-x-2 mb-4">
-        {languages.map((lang, index) => (
+        {tags.map((tag, index) => (
           <span key={index} className="bg-gray-200 text-sm py-1 px-3 rounded-full">
-            {lang}
+            {tag}
           </span>
         ))}
       </div>
@@ -41,26 +43,31 @@ const Projects = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <ProjectCard
-            title="Project 1"
-            description="This is a description of the first project. It does amazing things and uses modern technologies."
-            languages={['React', 'Axios', 'Router', 'Vercel']}
-            githubLink="https://github.com/yourusername/project1"
-            appLink="https://yourproject1.com"
-            image="path_to_project1_image.jpg"
-          />
-          <ProjectCard
-            title="Project 2"
-            description="This is a description of the second project. It is a full-stack application."
-            languages={['Node.js', 'Express', 'MongoDB', 'Vercel']}
-            githubLink="https://github.com/yourusername/project2"
-            appLink="https://yourproject2.com"
-            image="path_to_project2_image.jpg"
-          />
+          {data.projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+              githubLink={project.links.github}
+              appLink={project.links.app}
+              image="path_to_project_image.jpg" // İmaj yolu burada kullanılacak.
+            />
+          ))}
         </div>
       </div>
     </section>
   );
 };
+
+Projects.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired, // 'tags' dizisi içinde string olmalı
+  githubLink: PropTypes.string.isRequired,
+  appLink: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
+
 
 export default Projects;
