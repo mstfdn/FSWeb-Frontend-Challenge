@@ -1,4 +1,7 @@
 import { useState } from "react";
+import profilePic from "../assets/profile.jpg";
+import linkedinLogo from "../assets/linkedin-logo.png";
+import githubLogo from "../assets/github-logo.png";
 
 function Header() {
   const [darkMode, setDarkMode] = useState(false);
@@ -8,43 +11,75 @@ function Header() {
   const toggleLanguage = () => setLanguage(language === "tr" ? "en" : "tr");
 
   return (
-    <header
-      className={`p-4 ${
+    <div
+      className={`min-h-screen flex justify-center items-center ${
         darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
       }`}
     >
-      <div className="flex justify-between items-center">
-        <div>
-          <button onClick={toggleDarkMode}>
-            {darkMode ? "Light Mode" : "Dark Mode"}
+      <header className="w-full p-4">
+        {/* Dark Mode ve Dil Değiştirme Butonları */}
+        <div className="flex justify-between items-center mb-4">
+          <button onClick={toggleDarkMode} className="text-lg">
+            {darkMode
+              ? language === "tr"
+                ? "Aydınlık Mod"
+                : "Light Mode"
+              : language === "tr"
+              ? "Karanlık Mod"
+              : "Dark Mode"}
           </button>
-          <button onClick={toggleLanguage}>
-            {language === "tr" ? "Switch to English" : "Türkçe'ye Geç"}
+          <button onClick={toggleLanguage} className="text-lg">
+            {language === "tr" ? "Switch to English" : "Türkçeye Geç"}
           </button>
         </div>
-        <div className="flex flex-col items-end">
-          <h1 className="text-2xl font-bold">Mustafa'nın Portfolyosu</h1>
-          <p>Yazılımcı | Frontend | React Uzmanı</p>
-          <div className="flex space-x-2 mt-2">
-            <a href="https://linkedin.com" target="_blank">
-              <img src="linkedin-icon.png" alt="LinkedIn" />
-            </a>
-            <a href="https://github.com" target="_blank">
-              <img src="github-icon.png" alt="GitHub" />
-            </a>
+
+        <div className="flex justify-between items-center">
+          {/* Sol Kısım: Yazılar */}
+          <div className="flex flex-col space-y-4">
+            <h1 className="text-xl font-bold">
+              {language === "tr" ? "Merhaba! 👋" : "Hi! 👋"}
+            </h1>
+            <p className="text-lg">
+              {language === "tr" ? "Yazılımcı | Frontend | React Uzmanı" : "Developer | Frontend | React Specialist"}
+            </p>
+            <p className="text-lg">
+              {language === "tr" ? "Ben Mustafa. Full-stack geliştiriciyim. Sağlam ve ölçeklenebilir frontend ürünler geliştirebilirim. Hadi Tanışalım!" : "I'm Mustafa. I'm a full-stack developer. I can craft solid and scalable frontend products. Let's meet!"}
+            </p>
+          </div>
+
+          {/* Ortada: Profil Fotoğrafı */}
+          <div className="w-32 h-32 bg-red-500 shadow-lg rounded-full overflow-hidden">
+            <img
+              src={profilePic}
+              alt={language === "tr" ? "Profil Fotoğrafı" : "Profile Picture"}
+              className="object-cover w-full h-full"
+            />
           </div>
         </div>
-      </div>
-      <div className="mt-4">
-        <div className="w-40 h-40 bg-red-500 shadow-lg">
-          <img
-            src="profile-picture.png"
-            alt="Profil"
-            className="object-cover rounded-full"
-          />
+
+        {/* Sosyal Medya İkonları */}
+        <div className="flex justify-center items-center space-x-6 mt-8">
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={linkedinLogo}
+              alt="LinkedIn"
+              className="w-10 h-10"
+            />
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <img
+              src={githubLogo}
+              alt="GitHub"
+              className="w-10 h-10"
+            />
+          </a>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 }
 

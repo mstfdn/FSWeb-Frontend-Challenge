@@ -2,7 +2,7 @@
 import javascriptLogo from "../assets/js-logo.png";
 import reactLogo from "../assets/react-logo.png";
 import reduxLogo from "../assets/redux-logo.png";
-import nodeLogo from "../assets//nodejs-logo.png";
+import nodeLogo from "../assets/nodejs-logo.png";
 import vscodeLogo from "../assets/vscode-logo.png";
 import figmaLogo from "../assets/github-logo.png";
 
