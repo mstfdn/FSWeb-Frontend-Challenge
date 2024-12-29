@@ -3,32 +3,53 @@ import { useLanguage } from "../context/LanguageContext";
 import profilePic from "../assets/profile.jpg";
 import linkedinLogo from "../assets/linkedin-logo.png";
 import githubLogo from "../assets/github-logo.png";
+import Switch from '@mui/material/Switch';
 
 const Header = () => {
   const { darkMode, toggleDarkMode } = useTheme();
   const { language, toggleLanguage } = useLanguage();
 
+  const handleSwitchChange = () => {
+    toggleDarkMode(); // Dark Mode / Light Mode değişimi
+  };
+
   return (
     <div
-      className={`min-h-screen flex justify-center items-center ${
+      className={`h-auto flex justify-center items-center ${
         darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
       }`}
     >
       <header className="w-full p-4">
         {/* Dark Mode ve Dil Değiştirme Butonları */}
-        <div className="flex justify-between items-center mb-4">
-          <button onClick={toggleDarkMode} className="text-lg">
-            {darkMode
-              ? language === "tr"
-                ? "Aydınlık Mod"
-                : "Light Mode"
-              : language === "tr"
-              ? "Karanlık Mod"
-              : "Dark Mode"}
-          </button>
-          <button onClick={toggleLanguage} className="text-lg">
-            {language === "tr" ? "Switch to English" : "Türkçeye Geç"}
-          </button>
+        <div className="flex justify-end items-center mb-4">
+          <div className="flex items-center space-x-4">
+            {/* Dark Mode Switch */}
+            <div className="flex items-center space-x-2">
+              <Switch
+                checked={darkMode}
+                onChange={handleSwitchChange}
+                color="default"
+                inputProps={{ 'aria-label': 'Dark Mode Switch' }}
+              />
+              <span>
+                {darkMode
+                  ? language === "tr"
+                    ? "Karanlık Mod"
+                    : "Dark Mode"
+                  : language === "tr"
+                  ? "Aydınlık Mod"
+                  : "Light Mode"}
+              </span>
+            </div>
+
+            {/* Dil Değiştirme Butonu */}
+            <button
+              onClick={toggleLanguage}
+              className="text-lg"
+            >
+              {language === "tr" ? "Switch to English" : "Türkçeye Geç"}
+            </button>
+          </div>
         </div>
 
         <div className="flex justify-between items-center">
