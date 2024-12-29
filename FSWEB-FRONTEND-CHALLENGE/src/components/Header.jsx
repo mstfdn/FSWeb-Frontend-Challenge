@@ -15,13 +15,11 @@ const Header = () => {
 
   return (
     <div
-      className={`h-auto flex justify-center items-center ${
-        darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
-      }`}
+      className={`h-auto flex justify-center items-center ${darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-black"}`}
     >
-      <header className="w-full p-4">
+      <header className="w-full p-10">
         {/* Dark Mode ve Dil Değiştirme Metni */}
-        <div className="flex justify-end items-center mb-4">
+        <div className="p-10 flex justify-end items-center mb-4">
           <div className="flex items-center space-x-4">
             {/* Dark Mode Switch */}
             <div className="flex items-center space-x-2">
@@ -44,16 +42,26 @@ const Header = () => {
 
             {/* Dil Değiştirme Metni */}
             <span
-              onClick={toggleLanguage}
-              className={`text-lg cursor-pointer text-pink-500 ${language === "tr" ? "" : ""}`}
-            >
-              {language === "en" ? "TÜRKÇE'YE GEÇ" : "Switch to English"}
-              
-            </span>
+  onClick={toggleLanguage}
+  className={`text-lg cursor-pointer ${darkMode ? "text-white" : "text-black"}`}
+>
+  {language === "en" ? (
+    <>
+      <span className="text-pink-500">TÜRKÇE</span>
+      <span>'YE GEÇ</span>
+    </>
+  ) : (
+    <>
+      <span>SWITCH TO </span>
+      <span className="text-pink-500">ENGLISH</span>
+    </>
+  )}
+</span>
+
           </div>
         </div>
 
-        <div className="flex justify-between items-center">
+        <div className="p-10 flex justify-between items-center">
           {/* Sol Kısım: Yazılar */}
           <div className="flex flex-col space-y-4">
             <h1 className="text-xl font-bold">
@@ -68,7 +76,7 @@ const Header = () => {
           </div>
 
           {/* Ortada: Profil Fotoğrafı */}
-          <div className="w-32 h-32 bg-red-500 shadow-lg rounded-full overflow-hidden">
+          <div className=" w-64 h-64 bg-red-500 shadow-lg rounded-full overflow-hidden">
             <img
               src={profilePic}
               alt={language === "tr" ? "Profil Fotoğrafı" : "Profile Picture"}
@@ -78,7 +86,7 @@ const Header = () => {
         </div>
 
         {/* Sosyal Medya İkonları */}
-        <div className="flex justify-center items-center space-x-6 mt-8">
+        <div className="p-10 flex justify-start space-x-6 mt-8">
           <a
             href="https://linkedin.com"
             target="_blank"
@@ -87,17 +95,58 @@ const Header = () => {
             <img
               src={linkedinLogo}
               alt="LinkedIn"
-              className="w-10 h-10"
+              className="w-20 h-20 rounded-lg"
             />
           </a>
           <a href="https://github.com" target="_blank" rel="noopener noreferrer">
             <img
               src={githubLogo}
               alt="GitHub"
-              className="w-10 h-10"
+              className="w-28 h-20 rounded-lg" 
             />
           </a>
         </div>
+
+        
+        <div className="mt-8 text-start p-10 text-lg">
+  <p>
+    {language === "tr" 
+      ? (
+        <>
+          Şu anda{" "}
+          <span className="text-pink-500">Freelancing</span>{" "}
+          UX, UI, Web Tasarım Projesi için çalışıyorum.
+        </>
+      )
+      : (
+        <>
+          Currently{" "}
+          <span className="text-pink-500">Freelancing</span>{" "}
+          for <span className="text-pink-500">UX</span>, <span className="text-pink-500">UI</span>, <span className="text-pink-500">Web Design</span> Project.
+        </>
+      )}
+  </p>
+  <p>
+    {language === "tr"
+      ? (
+        <>
+          Beni ekibinize davet edin →{" "}
+          <a href="mailto:mstf.fdn@outlook.com" className="text-pink-500">
+            mstf.fdn@outlook.com
+          </a>
+        </>
+      )
+      : (
+        <>
+          Invite me to join your team →{" "}
+          <a href="mailto:mstf.fdn@outlook.com" className="text-pink-500">
+            mstf.fdn@outlook.com
+          </a>
+        </>
+      )}
+  </p>
+</div>
+
       </header>
     </div>
   );
