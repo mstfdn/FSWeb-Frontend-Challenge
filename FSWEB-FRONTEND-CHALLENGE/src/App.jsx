@@ -1,36 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import Skills from './components/Skills';
+import Profile from './components/Profile';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
+import { LanguageProvider } from './context/LanguageContext';
+
+import LanguageSwitcher from './components/LanguageSwitcher';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { theme, toggleTheme } = useTheme(); // Tema durumu ve toggle fonksiyonu
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className={`font-sans ${theme === 'dark' ? 'dark' : ''}`}>
+      <LanguageSwitcher />
+      <Header />
+      <Skills />
+      <Profile />
+      <Projects />
+      <Footer />
+      
+      {/* Tema değiştirme butonu */}
+      <button
+        onClick={toggleTheme}
+        className="fixed bottom-4 right-4 p-3 bg-gray-800 text-white rounded-full shadow-md"
+      >
+        {theme === "light" ? "Dark Mode" : "Light Mode"}
+      </button>
+    </div>
+  );
 }
 
-export default App
+export default function Root() {
+  return (
+    <ThemeProvider>
+      <LanguageProvider>
+        <App />
+      </LanguageProvider>
+    </ThemeProvider>
+  );
+}
