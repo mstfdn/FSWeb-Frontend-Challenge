@@ -20,7 +20,7 @@ const Header = () => {
       }`}
     >
       <header className="w-full p-4">
-        {/* Dark Mode ve Dil Değiştirme Butonları */}
+        {/* Dark Mode ve Dil Değiştirme Metni */}
         <div className="flex justify-end items-center mb-4">
           <div className="flex items-center space-x-4">
             {/* Dark Mode Switch */}
@@ -42,13 +42,14 @@ const Header = () => {
               </span>
             </div>
 
-            {/* Dil Değiştirme Butonu */}
-            <button
+            {/* Dil Değiştirme Metni */}
+            <span
               onClick={toggleLanguage}
-              className="text-lg"
+              className={`text-lg cursor-pointer text-pink-500 ${language === "tr" ? "" : ""}`}
             >
-              {language === "tr" ? "Switch to English" : "Türkçeye Geç"}
-            </button>
+              {language === "en" ? "TÜRKÇE'YE GEÇ" : "Switch to English"}
+              
+            </span>
           </div>
         </div>
 
