@@ -23,14 +23,26 @@ const Skills = () => {
   const title = language === "en" ? "Skills" : "Yetenekler";
 
   return (
-    <section className="p-10">
-      <h2 className="text-3xl font-bold text-center mb-8">{title}</h2>
+    <section
+      className={`p-10 ${
+        darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
+      }`}
+    >
+      <h2
+        className={`text-3xl font-bold text-center mb-8 ${
+          darkMode ? "text-white" : "text-black"
+        }`}
+      >
+        {title}
+      </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
         {skillsData.map((skill, index) => (
           <div
             key={index}
             className={`flex flex-col items-center p-4 rounded-lg shadow ${
-              darkMode ? "bg-gray-700 text-white" : "bg-white text-black"
+              darkMode
+                ? "bg-gray-700 text-white"
+                : "bg-white text-black"
             }`}
           >
             <img

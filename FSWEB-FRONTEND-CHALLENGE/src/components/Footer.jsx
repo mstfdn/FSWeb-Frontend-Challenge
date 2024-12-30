@@ -16,7 +16,7 @@ const Footer = () => {
           ? "Gelin, bir sonraki projeniz üzerinde birlikte çalışalım."
           : "Let’s work together on your next project."}
       </p>
-      <div className="flex flex-col mt-4 space-y-2">
+      <div className="flex flex-col md:flex-row md:justify-center md:space-x-6 mt-4 space-y-2 md:space-y-0">
         <a
           href="https://github.com/mstfdn"
           target="_blank"
