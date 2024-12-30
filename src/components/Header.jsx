@@ -69,13 +69,13 @@ const Header = () => {
           </div>
 
           {/* Ortada: Profil Fotoğrafı */}
-          <div className="w-64 h-64 bg-red-500 shadow-lg rounded-full overflow-hidden md:w-80 md:h-80 mr-16 mt-16">
-            <img
-              src={profilePic}
-              alt={language === "tr" ? "Profil Fotoğrafı" : "Profile Picture"}
-              className="object-cover w-full h-full"
-            />
-          </div>
+          <div className="responsive-profile-pic bg-red-500 shadow-lg rounded-full overflow-hidden md:w-80 md:h-80 mr-16 mt-16">
+  <img
+    src={profilePic}
+    alt={language === "tr" ? "Profil Fotoğrafı" : "Profile Picture"}
+    className="object-cover w-full h-full"
+  />
+</div>
         </div>
 
         {/* Sosyal Medya İkonları */}

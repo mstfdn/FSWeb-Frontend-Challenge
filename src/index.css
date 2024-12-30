@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .responsive-profile-pic {
+    width: 16rem; /* Varsayılan genişlik */
+    height: 16rem; /* Varsayılan yükseklik */
+  }
+
+  @media (max-width: 768px) {
+    .responsive-profile-pic {
+      width: 12rem; /* Küçük ekranlar için genişlik */
+      height: 12rem; /* Küçük ekranlar için yükseklik */
+    }
+  }
+}
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
