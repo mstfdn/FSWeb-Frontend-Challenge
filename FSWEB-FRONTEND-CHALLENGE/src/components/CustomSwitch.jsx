@@ -19,7 +19,7 @@ const CustomSwitch = ({ isChecked, handleSwitchChange }) => {
           backgroundColor: isChecked ? '#000' : '#f5a623',
         },
         '& .MuiSwitch-thumb:before': {
-          content: isChecked ? `'🌙'` : `'⭐'`,
+          content: isChecked ? `'🌙'` : `'🌞'`,
           fontSize: '1.5rem',
           position: 'absolute',
           top: '50%',
