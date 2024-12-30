@@ -95,14 +95,15 @@ const Header = () => {
             <img
               src={linkedinLogo}
               alt="LinkedIn"
-              className="w-10 h-10 rounded-lg"
+              className={`w-10 h-10 rounded-lg ${darkMode ? "filter brightness-0 invert" : ""}`}
+              
             />
           </a>
           <a href="https://github.com" target="_blank" rel="noopener noreferrer">
             <img
               src={githubLogo}
               alt="GitHub"
-              className="w-10 h-10 rounded-lg" 
+              className={`w-10 h-10 rounded-lg ${darkMode ? "filter brightness-0 invert" : ""}`} 
             />
           </a>
         </div>
