@@ -13,8 +13,8 @@ const data = {
     ],
     projects: [
       {
-        title: "Random Jokes",
-        description: "Pizza Project",
+        title: "Pizza Project",
+        description: "Technological Food",
         tags: ["React", "Axios"],
         links: { github: "https://github.com/mstfdn/fsweb-s8-challenge-pizza", app: "https://teknolojik-yemekler.vercel.app/" },
       },

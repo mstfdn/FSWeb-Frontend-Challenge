@@ -13,8 +13,8 @@ const Footer = () => {
     >
       <p className="mb-4">
         {language === "tr"
-          ? "Gelin, bir sonraki ürününüz üzerinde birlikte çalışalım."
-          : "Let’s work together on your next product."}
+          ? "Gelin, bir sonraki projeniz üzerinde birlikte çalışalım."
+          : "Let’s work together on your next project."}
       </p>
       <div className="flex flex-col mt-4 space-y-2">
         <a
