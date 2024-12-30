@@ -95,14 +95,14 @@ const Header = () => {
             <img
               src={linkedinLogo}
               alt="LinkedIn"
-              className="w-20 h-20 rounded-lg"
+              className="w-10 h-10 rounded-lg"
             />
           </a>
           <a href="https://github.com" target="_blank" rel="noopener noreferrer">
             <img
               src={githubLogo}
               alt="GitHub"
-              className="w-28 h-20 rounded-lg" 
+              className="w-10 h-10 rounded-lg" 
             />
           </a>
         </div>
