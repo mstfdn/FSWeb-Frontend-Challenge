@@ -1,6 +1,6 @@
 import { useTheme } from "../context/ThemeContext";
 import { useLanguage } from "../context/LanguageContext";
-import javascriptLogo from "../assets/js-logo.png";
+import javascriptLogo from "../assets/js-logo.jpg
 import reactLogo from "../assets/react-logo.png";
 import reduxLogo from "../assets/redux-logo.png";
 import nodeLogo from "../assets/nodejs-logo.png";
