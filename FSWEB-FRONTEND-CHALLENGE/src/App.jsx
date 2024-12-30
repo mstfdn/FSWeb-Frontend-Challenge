@@ -1,8 +1,4 @@
-import Header from "./components/Header";
-import Skills from "./components/Skills";
-import Profile from "./components/Profile";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
+import Anasayfa from "./components/Anasayfa";
 import { LanguageProvider } from "./context/LanguageContext";
 import { ThemeProvider } from "./context/ThemeContext";
 
@@ -11,11 +7,7 @@ function App() {
     <div className="container mx-auto p-6">
       <ThemeProvider>
         <LanguageProvider>
-          <Header />
-          <Skills />
-          <Profile />
-          <Projects />
-          <Footer />
+          <Anasayfa />
         </LanguageProvider>
       </ThemeProvider>
     </div>
