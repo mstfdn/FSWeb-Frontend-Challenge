@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useTheme } from "../context/ThemeContext";
 import { useLanguage } from "../context/LanguageContext";
 import data from "../data";
 import PropTypes from "prop-types";
 import projectPhoto from "../assets/pizza.png";
 import projectPhoto2 from "../assets/proje2.png";
+//import laptopImage from "../assets/laptop.png";
 
 const ProjectCard1 = ({ title, description, tags, githubLink, appLink, image }) => {
   const { darkMode } = useTheme();
