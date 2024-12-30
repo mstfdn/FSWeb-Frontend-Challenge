@@ -12,60 +12,60 @@ const Profile = () => {
       }`}
     >
       {/* Profil Bilgileri */}
-      <div
-        className={`flex flex-col w-full md:w-1/3 p-6 md:ml-24 rounded-lg border-2 ${
-          darkMode ? "bg-gray-700 text-white" : "bg-white text-black"
-        }`}
-      >
-        <h2 className="text-2xl font-bold mb-2">
-          {language === "tr" ? "Profil" : "Profile"}
-        </h2>
-        <h3 className="text-red-500 font-bold mb-2">
-          {language === "tr" ? "Temel Bilgiler" : "Basic Information"}
-        </h3>
+<div
+  className={`flex flex-col w-full md:w-1/3 p-6 md:ml-24 rounded-lg border-2 ${
+    darkMode ? "bg-gray-700 text-white" : "bg-white text-black"
+  }`}
+>
+  <h2 className="text-2xl font-bold mb-2 ">
+    {language === "tr" ? "Profil" : "Profile"}
+  </h2>
+  <h3 className="text-red-500 font-bold mb-4 ">
+    {language === "tr" ? "Temel Bilgiler" : "Basic Information"}
+  </h3>
 
-        {/* Doğum Tarihi */}
-        <div className="flex mb-2">
-          <p className="font-bold mr-9">
-            {language === "tr" ? "Doğum Tarihi" : "Birth Date"}
-          </p>
-          <p className="font-normal">
-            {language === "tr" ? "19.05.1996" : "19.05.1996"}
-          </p>
-        </div>
+  {/* Doğum Tarihi */}
+  <div className="flex mb-2 max-w-full">
+    <p className="font-bold mr-9 break-words">
+      {language === "tr" ? "Doğum Tarihi" : "Birth Date"}
+    </p>
+    <p className="font-normal ml-9 break-words">
+      {language === "tr" ? "19.05.1996" : "19.05.1996"}
+    </p>
+  </div>
 
-        {/* İkamet Şehri */}
-        <div className="flex mb-2">
-          <p className="font-bold mr-11">
-            {language === "tr" ? "İkamet Şehri" : "Residence City"}
-          </p>
-          <p className="font-normal">
-            {language === "tr" ? "Bursa" : "Bursa"}
-          </p>
-        </div>
+  {/* İkamet Şehri */}
+  <div className="flex mb-2  max-w-full">
+    <p className="font-bold mr-11 break-words">
+      {language === "tr" ? "İkamet Şehri" : "Residence City"}
+    </p>
+    <p className="font-normal ml-9 break-words">{language === "tr" ? "Bursa" : "Bursa"}</p>
+  </div>
 
-        {/* Eğitim Durumu */}
-        <div className="flex mb-2">
-          <p className="font-bold mr-12">
-            {language === "tr" ? "Eğitim Durumu" : "Education"}
-          </p>
-          <p className="font-normal">
-            {language === "tr"
-              ? "Düzce Üniversitesi Yönetim Bilişim Sistemleri, 2021"
-              : "Düzce University Management Information Systems, 2021"}
-          </p>
-        </div>
+  {/* Eğitim Durumu */}
+  <div className="flex mb-2 max-w-full">
+    <div>
+    <p className="font-bold mr-12 break-words">
+      {language === "tr" ? "Eğitim Durumu" : "Education"}
+    </p>
+    </div>
+    <p className="font-normal ml-10 break-words">
+      {language === "tr"
+        ? "Düzce Ünv. Yönetim Bilişim Sistemleri, 2021"
+        : "Düzce Unv Management Information Systems, 2021"}
+    </p>
+  </div>
 
-        {/* Tercih Ettiği Rol */}
-        <div className="flex mb-2">
-          <p className="font-bold mr-5">
-            {language === "tr" ? "Tercih Ettiği Rol" : "Preferred Role"}
-          </p>
-          <p className="font-normal">
-            {language === "tr" ? "Frontend, UI" : "Frontend, UI"}
-          </p>
-        </div>
-      </div>
+  {/* Tercih Ettiği Rol */}
+  <div className="flex mb-2  max-w-full">
+    <p className="font-bold mr-5 break-words">
+      {language === "tr" ? "Tercih Ettiği Rol" : "Preferred Role"}
+    </p>
+    <p className="font-normal ml-9 break-words">{language === "tr" ? "Frontend, UI" : "Frontend, UI"}</p>
+  </div>
+</div>
+
+
 
       {/* About Me Bölümü */}
       <div
