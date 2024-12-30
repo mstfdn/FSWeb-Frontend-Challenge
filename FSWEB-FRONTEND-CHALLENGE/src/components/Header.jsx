@@ -1,43 +1,40 @@
+import { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { useLanguage } from "../context/LanguageContext";
 import profilePic from "../assets/profile.jpg";
 import linkedinLogo from "../assets/linkedin-logo.png";
 import githubLogo from "../assets/github-logo.png";
-import Switch from '@mui/material/Switch';
+import CustomSwitch from './CustomSwitch'; // Import ettik
 
 const Header = () => {
   const { darkMode, toggleDarkMode } = useTheme();
   const { language, toggleLanguage } = useLanguage();
+  const [isChecked, setIsChecked] = useState(darkMode);
 
   const handleSwitchChange = () => {
-    toggleDarkMode(); // Dark Mode / Light Mode değişimi
+    toggleDarkMode();
+    setIsChecked(!isChecked);
   };
 
   return (
-    <div
-      className={`h-auto flex justify-center items-center ${
-        darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
-      }`}
-    >
+    <div className={`h-auto flex justify-center items-center ${darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"}`}>
       <header className="w-full p-4 md:p-10">
         {/* Dark Mode ve Dil Değiştirme Metni */}
         <div className="flex justify-end items-center mb-4 space-x-4 mr-20">
           {/* Dark Mode Switch Sağda */}
           <div className="flex items-center space-x-2">
-            <Switch
-              checked={darkMode}
-              onChange={handleSwitchChange}
-              color="default"
-              inputProps={{ 'aria-label': 'Dark Mode Switch' }}
+            <CustomSwitch
+              isChecked={isChecked}
+              handleSwitchChange={handleSwitchChange}
             />
             <span>
               {darkMode
                 ? language === "tr"
-                  ? "Karanlık Mod"
-                  : "Dark Mode"
+                  ? "Aydınlık Mod"
+                  : "Light Mode"
                 : language === "tr"
-                ? "Aydınlık Mod"
-                : "Light Mode"}
+                ? "Karanlık Mod"
+                : "Dark Mode"}
             </span>
           </div>
 
@@ -110,14 +107,14 @@ const Header = () => {
               ? (
                 <>
                   Şu anda{" "}
-                  <span className="text-pink-500">Freelancing</span>{" "}
-                  UX, UI, Web Tasarım Projesi için çalışıyorum.
+                  <span className="text-pink-500 ">Freelancing</span>{" "}
+                  için <span className="text-pink-500">UX</span>, <span className="text-pink-500">UI</span>, <span className="text-pink-500">Web Tasarım</span> Projesi için çalışıyorum.
                 </>
               )
               : (
                 <>
                   Currently{" "}
-                  <span className="text-pink-500">Freelancing</span>{" "}
+                  <span className="text-pink-500 ">Freelancing</span>{" "}
                   for <span className="text-pink-500">UX</span>, <span className="text-pink-500">UI</span>, <span className="text-pink-500">Web Design</span> Project.
                 </>
               )}
