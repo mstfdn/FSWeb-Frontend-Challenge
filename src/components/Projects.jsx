@@ -95,7 +95,7 @@ const ProjectCard2 = () => {
   return (
     <div
       className={`p-6 rounded-lg shadow-md flex flex-col items-center ${
-        darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
+        darkMode ? "bg-gray-800 text-white" : "bg-gray-300 text-black"
       }`}
     >
       <h3 className={`text-xl font-semibold mb-2 ${darkMode ? "text-white" : "text-black"}`}>
