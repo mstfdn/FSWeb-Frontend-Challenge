@@ -17,6 +17,7 @@ const data = {
         description: "Technological Food",
         tags: ["React", "Axios"],
         links: { github: "https://github.com/mstfdn/fsweb-s8-challenge-pizza", app: "https://teknolojik-yemekler.vercel.app/" },
+        
       },
     ],
   };

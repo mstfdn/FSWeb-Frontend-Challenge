@@ -45,13 +45,13 @@ const Header = () => {
           >
             {language === "en" ? (
               <>
-                <span className="text-pink-500">TÜRKÇE</span>
-                <span>'YE GEÇ</span>
+                <span className="text-pink-500">Türkçe</span>
+                <span>'ye Geç</span>
               </>
             ) : (
               <>
-                <span>SWITCH TO </span>
-                <span className="text-pink-500">ENGLISH</span>
+                <span>Switch to </span>
+                <span className="text-pink-500">English</span>
               </>
             )}
           </span>
