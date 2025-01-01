@@ -4,7 +4,7 @@ import { useLanguage } from "../context/LanguageContext";
 import profilePic from "../assets/profile.jpg";
 import linkedinLogo from "../assets/linkedin-logo.png";
 import githubLogo from "../assets/github-logo.png";
-import CustomSwitch from './CustomSwitch'; // Import ettik
+import CustomSwitch from './CustomSwitch';
 
 const Header = () => {
   const { darkMode, toggleDarkMode } = useTheme();
