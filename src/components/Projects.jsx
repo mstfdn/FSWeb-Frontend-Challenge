@@ -56,25 +56,28 @@ const ProjectCard1 = ({ title, description, tags, githubLink, appLink }) => {
       </div>
       {/* Laptop ekranı içinde proje fotoğrafı */}
       <div className="w-full h-80 bg-gray-200 flex justify-center items-center rounded-lg overflow-hidden relative">
-          {/* Laptop ekranı */}
-          <div className="w-[90%] h-[80%] bg-gray-200 rounded-md relative flex justify-center items-center">
-            {/* İçerik grubu */}
-            <div className="relative w-full h-full flex items-center justify-center">
-                    {/* Laptop Image */}
-              <img
-                src={laptopImage}
-                alt="Laptop Image"
-                className="absolute w-full h-full object-contain"
-              />
-              {/* Project Photo */}
-              <img
-                src={projectPhoto}
-                alt={title}
-                className="relative z-10 w-[52%] h-auto object-contain transform -translate-y-1/4 mt-8 mr-0.5"
-              />
-            </div>
-         </div>
-        </div>
+  {/* Laptop ekranı */}
+  <div className="w-[90%] h-[80%] bg-gray-200 rounded-md relative flex justify-center items-center">
+    {/* İçerik grubu */}
+    <div className="relative w-full h-full flex items-center justify-center">
+      {/* Laptop Image */}
+      <img
+        src={laptopImage}
+        alt="Laptop Image"
+        className="absolute w-full h-full object-contain"
+      />
+      {/* Project Photo */}
+      <img
+        src={projectPhoto}
+        alt={title}
+        className="relative z-10 w-auto h-auto max-w-[52%] max-h-[80%] object-contain transform -translate-y-1/4 mt-8"
+      />
+    </div>
+  </div>
+</div>
+
+
+
 
 
 
