@@ -5,16 +5,17 @@ import data from "../data";
 import PropTypes from "prop-types";
 import projectPhoto from "../assets/pizza.png";
 import projectPhoto2 from "../assets/proje2.png";
-//import laptopImage from "../assets/laptop.png";
+import laptopImage from "../assets/laptop.png";
 
-const ProjectCard1 = ({ title, description, tags, githubLink, appLink, image }) => {
+
+const ProjectCard1 = ({ title, description, tags, githubLink, appLink }) => {
   const { darkMode } = useTheme();
   const { language } = useLanguage();
 
   return (
     <div
       className={`p-6 rounded-lg shadow-md flex flex-col items-center ${
-        darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
+        darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
       }`}
     >
       {/* Proje Başlığı */}
@@ -54,9 +55,32 @@ const ProjectCard1 = ({ title, description, tags, githubLink, appLink, image }) 
         </a>
       </div>
       {/* Laptop ekranı içinde proje fotoğrafı */}
-      <div className="w-full h-60 bg-gray-100 flex justify-center items-center rounded-lg overflow-hidden">
-        <img src={image} alt={title} className="object-cover w-full h-full" />
-      </div>
+      <div className="w-full h-80 bg-gray-200 flex justify-center items-center rounded-lg overflow-hidden relative">
+          {/* Laptop ekranı */}
+          <div className="w-[90%] h-[80%] bg-gray-200 rounded-md relative flex justify-center items-center">
+            {/* İçerik grubu */}
+            <div className="relative w-full h-full flex items-center justify-center">
+                    {/* Laptop Image */}
+              <img
+                src={laptopImage}
+                alt="Laptop Image"
+                className="absolute w-full h-full object-contain"
+              />
+              {/* Project Photo */}
+              <img
+                src={projectPhoto}
+                alt={title}
+                className="relative z-10 w-[52%] h-auto object-contain transform -translate-y-1/4 mt-8 mr-0.5"
+              />
+            </div>
+         </div>
+        </div>
+
+
+
+
+
+
     </div>
   );
 };
@@ -68,7 +92,7 @@ const ProjectCard2 = () => {
   return (
     <div
       className={`p-6 rounded-lg shadow-md flex flex-col items-center ${
-        darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
+        darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
       }`}
     >
       <h3 className={`text-xl font-semibold mb-2 ${darkMode ? "text-white" : "text-black"}`}>
@@ -106,9 +130,25 @@ const ProjectCard2 = () => {
           {language === "tr" ? "Uygulamaya Git →" : "Go to app →"}
         </a>
       </div>
-      <div className="w-full h-60 bg-gray-100 flex justify-center items-center rounded-lg overflow-hidden">
-        <img src={projectPhoto2} alt="Project 3" className="object-cover w-full h-full" />
-      </div>
+      <div className="w-full h-80 bg-gray-100 flex justify-center items-center rounded-lg overflow-hidden relative">
+          {/* Laptop ekranı */}
+          <div className="w-[90%] h-[80%] bg-gray-200 rounded-md relative flex justify-center items-center">
+            {/* İçerik grubu */}
+            <div className="relative w-full h-full flex items-center justify-center">
+                    {/* Laptop Image */}
+              <img
+                src={laptopImage}
+                alt="Laptop Image"
+                className="absolute w-full h-full object-contain"
+              />
+              {/* Project Photo */}
+              <img
+                src={projectPhoto2}
+                className="relative z-10 w-[52%] h-auto object-contain transform -translate-y-1/4 mt-8 mr-0.5"
+              />
+            </div>
+         </div>
+        </div>
     </div>
   );
 };
