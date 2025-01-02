@@ -11,21 +11,28 @@ const Footer = () => {
         darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
       }`}
     >
-      {/* Slogan */}
+      {/* Slogan*/}
       <p
-        className="text-5xl mb-4 p-10 md:mb-0 relative"
-        style={{ lineHeight: "1.8" }}
-      >
-        {language === "tr" ? (
-          <>
-            Gelin, bir sonraki <br /> projeniz üzerinde birlikte çalışalım.
-          </>
-        ) : (
-          <>
-            Let’s work together on <br /> your next project.
-          </>
-        )}
-      </p>
+  className={`text-5xl mb-4 p-10 font-semibold ${darkMode ? "text-white" : "text-black"} mb-3`}
+  style={{ lineHeight: "1.8" }}>
+  {language === "tr" ? (
+    <>
+      Gelin, bir sonraki <br /> projeniz üzerinde birlikte çalışalım.
+    </>
+  ) : (
+    <>
+      Let’s work together on <br /> your next project.
+    </>
+  )}
+  <div
+    className={`w-[25rem] h-4 opacity-65 ${darkMode ? "bg-blue-400" : "bg-blue-600"} rounded-full mx-auto`}
+    style={{
+      marginTop: "-1%",
+      transform: "translateX(15%) translateY(-700%)", // Bu değeri değiştirerek sağa veya sola hareket ettirebilirsiniz
+    }}
+  />
+</p>
+
 
       {/* Linkler */}
       <div className="flex flex-col space-y-4 md:space-y-2 text-lg font-bold">
@@ -61,14 +68,6 @@ const Footer = () => {
           {language === "tr" ? "E-posta" : "Email"}
         </a>
       </div>
-
-      {/* Çubuk */}
-      <div
-        className="w-[20rem] h-[1rem] border-[0.6rem] border-blue-500 rounded-l-3xl rounded-r-3xl absolute translate-x-[-60%] translate-y-[-1rem] left-1/2 opacity-65"
-        style={{
-          maxWidth: "90%", // Küçük ekranlar için genişlik sınırlaması
-        }}
-      ></div>
     </footer>
   );
 };
