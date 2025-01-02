@@ -55,9 +55,15 @@ const ProjectCard1 = ({ title, description, tags, githubLink, appLink }) => {
         </a>
       </div>
       {/* Laptop ekranı içinde proje fotoğrafı */}
-<div className="w-full h-80 bg-gray-200 flex justify-center items-center rounded-lg overflow-hidden relative">
+<div className={`w-full h-80 bg-gray-200 flex justify-center items-center rounded-lg overflow-hidden relative
+  ${
+    darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
+  }`}>
   {/* Laptop ekranı */}
-  <div className="w-[90%] h-[80%] bg-gray-200 rounded-md relative flex justify-center items-center">
+  <div className={`w-[90%] h-[80%] bg-gray-200 rounded-md relative flex justify-center items-center
+  ${
+    darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
+  }`}>
     {/* İçerik grubu */}
     <div className="relative w-full h-full flex items-center justify-center">
       {/* Laptop Image */}
@@ -142,9 +148,16 @@ const ProjectCard2 = () => {
           {language === "tr" ? "Uygulamaya Git →" : "Go to app →"}
         </a>
       </div>
-      <div className="w-full h-80 bg-gray-200 flex justify-center items-center rounded-lg overflow-hidden relative">
+      <div className={`w-full h-80 bg-gray-200 flex justify-center items-center rounded-lg overflow-hidden relative
+  ${
+    darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
+  }`}>
+        
   {/* Laptop ekranı */}
-  <div className="w-[90%] h-[80%] bg-gray-200 rounded-md relative flex justify-center items-center">
+  <div className={`w-[90%] h-[80%] bg-gray-200 rounded-md relative flex justify-center items-center
+  ${
+    darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
+  }`}>
     {/* İçerik grubu */}
     <div className="relative w-full h-full flex items-center justify-center">
       {/* Laptop Image */}

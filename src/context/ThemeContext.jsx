@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext } from 'react';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
-// Dark Mode Context
+
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(false);
+  
+  const [darkMode, setDarkMode] = useLocalStorage('darkMode', false);
 
   const toggleDarkMode = () => setDarkMode(prevMode => !prevMode);
 

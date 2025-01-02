@@ -5,6 +5,7 @@ import Projects from "./Projects";
 import Footer from "./Footer";
 import { useTheme } from "../context/ThemeContext";
 
+
 const Anasayfa = () => {
   const { darkMode } = useTheme();
 
