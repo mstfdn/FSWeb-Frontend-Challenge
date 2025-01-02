@@ -19,6 +19,7 @@ const Header = () => {
   return (
     <div className={`h-auto flex justify-center items-center ${darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"}`}>
       <header className="w-full p-4 md:p-10">
+        
         {/* Dark Mode ve Dil Değiştirme Metni */}
         <div className="flex justify-end items-center mb-4 space-x-4 mr-20">
           {/* Dark Mode Switch Sağda */}
@@ -79,13 +80,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div
-          className={`w-[25rem] h-10 opacity-65 ${darkMode ? "bg-blue-400" : "bg-blue-600"} rounded-full mx-auto`}
-          style={{
-            marginTop: "-1%",
-            transform: "translateX(15%) translateY(-700%)", // Bu değeri değiştirerek sağa veya sola hareket ettirebilirsiniz
-          }}
-        />
+        
 
 
         {/* Sosyal Medya İkonları */}
@@ -149,6 +144,17 @@ const Header = () => {
               )}
           </p>
         </div>
+        <div
+  className={`w-[10rem] h-[3rem] ${darkMode ? "bg-pink-500" : "bg-pink-600"} rounded-l-3xl mx-auto`}
+  style={{
+    position: "relative", // Sabit konumda tutmak için fixed
+    top: "10%", // Sayfanın üst kısmına göre mesafe
+    left: "50%", // Sayfanın tam ortasında
+    transform: "translateX(-25%) translateY(-500%)", // Tam ortada olması için
+    marginTop: "-1%",
+    zIndex: 10, // Diğer öğelerin üstünde görünmesini sağlamak için
+  }}
+/>
       </header>
     </div>
   );
