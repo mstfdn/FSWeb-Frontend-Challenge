@@ -41,10 +41,11 @@ const Footer = () => {
           href=""
           target="_blank"
           rel="noopener noreferrer"
-          className="text-black hover:underline"
+          className={`text-black hover:underline ${darkMode ? "text-white" : "text-black"}`}
         >
           {language === "tr" ? "Kişisel Blog" : "Personal Blog"}
         </a>
+
         <a
           href="https://www.linkedin.com/in/mustafa-fidan-b65b12339/"
           target="_blank"

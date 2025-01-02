@@ -84,7 +84,7 @@ const Header = () => {
         {/* Sosyal Medya İkonları */}
         <div className="flex justify-start space-x-6 mt-8 p-4 md:p-10 ml-2">
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/mustafa-fidan-b65b12339/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -94,7 +94,7 @@ const Header = () => {
               className={`w-10 h-10 rounded-lg ${darkMode ? "filter brightness-0 invert" : ""}`}
             />
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/mstfdn" target="_blank" rel="noopener noreferrer">
             <img
               src={githubLogo}
               alt="GitHub"

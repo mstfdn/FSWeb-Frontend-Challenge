@@ -24,15 +24,10 @@ const Skills = () => {
 
   return (
     <section
-      className={`p-10 ${
-        darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black "
-      }`}
+      className={`p-10 ${darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"}`}
     >
-      
       <h2
-        className={`text-3xl font-bold text-center mb-8 ${
-          darkMode ? "text-white" : "text-black"
-        }`}
+        className={`text-3xl font-bold text-center mb-8 ${darkMode ? "text-white" : "text-black"}`}
       >
         {title}
       </h2>
@@ -40,11 +35,9 @@ const Skills = () => {
         {skillsData.map((skill, index) => (
           <div
             key={index}
-            className={`flex flex-col items-center p-4 rounded-lg shadow ${
-              darkMode
-                ? "bg-gray-700 text-white"
-                : "bg-white text-black"
-            }`}
+            className={`flex flex-col items-center p-4 rounded-lg shadow transition-all transform hover:scale-105 hover:shadow-xl ${
+              darkMode ? "bg-gray-700 text-white" : "bg-white text-black"
+            } cursor-pointer`} // cursor pointer eklendi
           >
             <img
               src={skill.logo}
@@ -53,12 +46,9 @@ const Skills = () => {
             />
             <p className="text-center font-medium">{skill.name}</p>
           </div>
-          
         ))}
-        <div className="w-[10rem] h-[1rem] border-[1.5rem]  border-gray-500 rounded-r-3xl translate-x-[-2.5rem] translate-y-[2rem]"></div>
-        
+        <div className="w-[10rem] h-[1rem] border-[1.5rem] border-pink-500 rounded-r-3xl translate-x-[-2.5rem] translate-y-[2rem]"></div>
       </div>
-      
     </section>
   );
 };
