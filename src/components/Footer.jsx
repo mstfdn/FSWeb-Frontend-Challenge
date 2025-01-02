@@ -41,7 +41,7 @@ const Footer = () => {
           href=""
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 hover:underline"
+          className="text-black hover:underline"
         >
           {language === "tr" ? "Kişisel Blog" : "Personal Blog"}
         </a>
@@ -55,7 +55,7 @@ const Footer = () => {
         </a>
         <a
           href="mailto:your-email@example.com"
-          className="text-blue-500 hover:underline"
+          className="text-red-500 hover:underline"
         >
           {language === "tr" ? "E-posta" : "Email"}
         </a>

@@ -6,6 +6,8 @@ import Anasayfa from "./components/Anasayfa";
 import { LanguageProvider } from "./context/LanguageContext";
 import { ThemeProvider } from "./context/ThemeContext";
 
+
+
 function App() {
   useEffect(() => {
     // Gönderilecek obje
@@ -35,8 +37,8 @@ function App() {
   }, []); // Boş bağımlılık dizisi: Sadece ilk render'da çalışır.
 
   return (
-    <div className="container mx-auto p-6">
-      <div className="z-10 w-[8.35rem] h-[5rem] rounded-b-[5rem] translate-x-[30rem] translate-y-[5rem] bg-gray-300"></div>
+    <div className="w-full">
+      {/* Çubuğun konumunu ve boyutunu gözden geçirelim */}
       
       <ThemeProvider>
         <LanguageProvider>
