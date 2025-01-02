@@ -63,7 +63,7 @@ const Footer = () => {
 
       {/* Çubuk */}
       <div
-        className="w-[20rem] h-[1rem] border-[0.6rem] border-blue-400 rounded-l-3xl rounded-r-3xl absolute translate-x-[-60%] translate-y-[-1rem] left-1/2 opacity-75"
+        className="w-[20rem] h-[1rem] border-[0.6rem] border-blue-500 rounded-l-3xl rounded-r-3xl absolute translate-x-[-60%] translate-y-[-1rem] left-1/2 opacity-65"
         style={{
           maxWidth: "90%", // Küçük ekranlar için genişlik sınırlaması
         }}
