@@ -30,7 +30,7 @@ const ProjectCard1 = ({ title, description, tags, githubLink, appLink }) => {
           <span
             key={index}
             className={`text-sm py-1 px-3 rounded-full ${
-              darkMode ? "bg-gray-700 text-gray-300" : "bg-gray-400 text-black"
+              darkMode ? "bg-gray-700 text-gray-300" : "bg-gray-300 text-black"
             }`}
           >
             {tag}
@@ -120,14 +120,14 @@ const ProjectCard2 = () => {
       <div className="flex space-x-2 mb-4">
         <span
           className={`text-sm py-1 px-3 rounded-full ${
-            darkMode ? "bg-gray-700 text-gray-200" : "bg-gray-400 text-black"
+            darkMode ? "bg-gray-700 text-gray-200" : "bg-gray-300 text-black"
           }`}
         >
           React
         </span>
         <span
           className={`text-sm py-1 px-3 rounded-full ${
-            darkMode ? "bg-gray-700 text-gray-200" : "bg-gray-400 text-black"
+            darkMode ? "bg-gray-700 text-gray-200" : "bg-gray-300 text-black"
           }`}
         >
           Router
