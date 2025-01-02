@@ -18,7 +18,7 @@ const Profile = () => {
         <div
           className={`flex flex-col w-full md:w-1/3 p-6 md:ml-24 rounded-lg border-2 ${
           darkMode ? "bg-gray-700 text-white" : "bg-white text-black"
-            } shadow-lg shadow-[5px_5px_10px_rgba(0,0,0,0.55)]`}
+            } shadow-lg shadow-[5px_5px_10px_rgba(0,0,0,0.75)]`}
         >
 
           <h2 className="text-2xl font-bold mb-2">
