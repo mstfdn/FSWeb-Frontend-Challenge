@@ -55,7 +55,7 @@ const ProjectCard1 = ({ title, description, tags, githubLink, appLink }) => {
         </a>
       </div>
       {/* Laptop ekranı içinde proje fotoğrafı */}
-      <div className="w-full h-80 bg-gray-200 flex justify-center items-center rounded-lg overflow-hidden relative">
+<div className="w-full h-80 bg-gray-200 flex justify-center items-center rounded-lg overflow-hidden relative">
   {/* Laptop ekranı */}
   <div className="w-[90%] h-[80%] bg-gray-200 rounded-md relative flex justify-center items-center">
     {/* İçerik grubu */}
@@ -65,16 +65,25 @@ const ProjectCard1 = ({ title, description, tags, githubLink, appLink }) => {
         src={laptopImage}
         alt="Laptop Image"
         className="absolute w-full h-full object-contain"
+        style={{
+          maxWidth: "100%", // Görselin taşmasını önlemek için maksimum genişlik
+          maxHeight: "100%", // Görselin taşmasını önlemek için maksimum yükseklik
+        }}
       />
       {/* Project Photo */}
       <img
         src={projectPhoto}
         alt={title}
-        className="relative z-10 w-auto h-auto max-w-[52%] max-h-[80%] object-contain transform -translate-y-1/4 mt-8"
+        className="absolute z-10 object-contain transform -translate-y-7"
+        style={{
+          maxWidth: "70%", // Fotoğraf genişliğini sınırla
+          maxHeight: "70%", // Fotoğraf yüksekliğini sınırla
+        }}
       />
     </div>
   </div>
 </div>
+
 
 
 
@@ -95,7 +104,7 @@ const ProjectCard2 = () => {
   return (
     <div
       className={`p-6 rounded-lg shadow-md flex flex-col items-center ${
-        darkMode ? "bg-gray-800 text-white" : "bg-gray-300 text-black"
+        darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
       }`}
     >
       <h3 className={`text-xl font-semibold mb-2 ${darkMode ? "text-white" : "text-black"}`}>
@@ -105,14 +114,14 @@ const ProjectCard2 = () => {
       <div className="flex space-x-2 mb-4">
         <span
           className={`text-sm py-1 px-3 rounded-full ${
-            darkMode ? "bg-gray-700 text-gray-300" : "bg-gray-400 text-black"
+            darkMode ? "bg-gray-700 text-gray-200" : "bg-gray-400 text-black"
           }`}
         >
           React
         </span>
         <span
           className={`text-sm py-1 px-3 rounded-full ${
-            darkMode ? "bg-gray-700 text-gray-300" : "bg-gray-400 text-black"
+            darkMode ? "bg-gray-700 text-gray-200" : "bg-gray-400 text-black"
           }`}
         >
           Router
@@ -133,25 +142,35 @@ const ProjectCard2 = () => {
           {language === "tr" ? "Uygulamaya Git →" : "Go to app →"}
         </a>
       </div>
-      <div className="w-full h-80 bg-gray-100 flex justify-center items-center rounded-lg overflow-hidden relative">
-          {/* Laptop ekranı */}
-          <div className="w-[90%] h-[80%] bg-gray-200 rounded-md relative flex justify-center items-center">
-            {/* İçerik grubu */}
-            <div className="relative w-full h-full flex items-center justify-center">
-                    {/* Laptop Image */}
-              <img
-                src={laptopImage}
-                alt="Laptop Image"
-                className="absolute w-full h-full object-contain"
-              />
-              {/* Project Photo */}
-              <img
-                src={projectPhoto2}
-                className="relative z-10 w-[52%] h-auto object-contain transform -translate-y-1/4 mt-8 mr-0.5"
-              />
-            </div>
-         </div>
-        </div>
+      <div className="w-full h-80 bg-gray-200 flex justify-center items-center rounded-lg overflow-hidden relative">
+  {/* Laptop ekranı */}
+  <div className="w-[90%] h-[80%] bg-gray-200 rounded-md relative flex justify-center items-center">
+    {/* İçerik grubu */}
+    <div className="relative w-full h-full flex items-center justify-center">
+      {/* Laptop Image */}
+      <img
+        src={laptopImage}
+        alt="Laptop Image"
+        className="absolute w-full h-full object-contain"
+        style={{
+          maxWidth: "100%", // Görselin taşmasını önlemek için maksimum genişlik
+          maxHeight: "100%", // Görselin taşmasını önlemek için maksimum yükseklik
+        }}
+      />
+      {/* Project Photo */}
+      <img
+        src={projectPhoto2}
+        alt="Serenity Cafe"
+        className="absolute z-10 object-contain transform -translate-y-7"
+        style={{
+          maxWidth: "70%", // Fotoğraf genişliğini sınırla
+          maxHeight: "70%", // Fotoğraf yüksekliğini sınırla
+        }}
+      />
+    </div>
+  </div>
+</div>
+
     </div>
   );
 };

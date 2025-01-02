@@ -80,7 +80,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="w-[10rem] h-[1rem] border-[1.5rem]  border-pink-500 rounded-l-3xl translate-x-[60rem] translate-y-[5rem]"></div>
+        <div className="w-[10rem] h-[1rem] border-[1.5rem]  border-pink-500 rounded-l-3xl translate-x-[80.5rem] translate-y-[5rem]"></div>
 
         {/* Sosyal Medya İkonları */}
         <div className="flex justify-start space-x-6 mt-8 p-4 md:p-10 ml-2">
