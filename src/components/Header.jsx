@@ -69,20 +69,17 @@ const Header = () => {
           </div>
 
           {/* Ortada: Profil Fotoğrafı */}
-          <div className="relative w-full h-full md:w-80 md:h-80 lg:w-96 lg:h-96 mr-16 mt-16">
-          <div className="responsive-profile-pic bg-pink-500 shadow-lg rounded-xl overflow-hidden w-[60%] h-[60%] sm:w-[70%] sm:h-[70%] md:w-80 md:h-80 lg:w-96 lg:h-96 translate-x-[-1.5rem] translate-y-[-4.8rem] absolute">
+          <div className="responsive-profile-pic bg-pink-500 shadow-lg rounded-xl overflow-hidden md:w-80 md:h-80 mr-16 mt-16">
+            <div className="responsive-profile-pic bg-pink-500 shadow-lg rounded-xl overflow-hidden md:w-80 md:h-80 mr-16 mt-16 translate-x-[-1.5rem] translate-y-[-4.8rem] absolute">
             <img
               src={profilePic}
               alt={language === "tr" ? "Profil Fotoğrafı" : "Profile Picture"}
               className="object-cover w-full h-full"
             />
-
+            
             </div>
           </div>
-          
         </div>
-        <div className="w-[10rem] h-[1rem] border-[1.5rem]  border-pink-500 rounded-l-3xl translate-x-[164.1rem] translate-y-[5rem]"></div>
-
         {/* Sosyal Medya İkonları */}
         <div className="flex justify-start space-x-6 mt-8 p-4 md:p-10 ml-2">
           <a
