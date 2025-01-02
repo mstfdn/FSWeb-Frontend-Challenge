@@ -71,15 +71,16 @@ const Header = () => {
           {/* Ortada: Profil Fotoğrafı */}
           <div className="responsive-profile-pic bg-pink-500 shadow-lg rounded-xl overflow-hidden md:w-80 md:h-80 mr-16 mt-16">
             <div className="responsive-profile-pic bg-pink-500 shadow-lg rounded-xl overflow-hidden md:w-80 md:h-80 mr-16 mt-16 translate-x-[-1.5rem] translate-y-[-4.8rem] absolute">
+              
             <img
               src={profilePic}
               alt={language === "tr" ? "Profil Fotoğrafı" : "Profile Picture"}
               className="object-cover w-full h-full"
             />
-            
             </div>
           </div>
         </div>
+
         {/* Sosyal Medya İkonları */}
         <div className="flex justify-start space-x-6 mt-8 p-4 md:p-10 ml-2">
           <a

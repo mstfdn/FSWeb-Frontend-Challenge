@@ -76,9 +76,23 @@ const Profile = () => {
       ? "Merhaba, ben Mustafa. Yazılım geliştirmeye olan ilgim genç yaşlarda başladı ve şu anda frontend geliştirme konusunda uzmanlaşıyorum. Yeni teknolojileri öğrenmeye ve projeler geliştirmeye her zaman açığım. Takım çalışmasına yatkınım ve sorumluluk almayı seviyorum."
       : "Hello, I'm Mustafa. My interest in software development started at a young age, and now I specialize in frontend development. I am always open to learning new technologies and developing projects. I am a team player and enjoy taking responsibility."}
   </p>
-
-  <div className="sm:hidden md:hidden lg:block w-[5rem] h-[1rem] border-[0.6rem] border-blue-600 rounded-l-3xl rounded-r-3xl absolute translate-x-[-10rem] translate-y-[1.2rem] left-1/2 opacity-55 sm:w-[7rem] md:w-[9rem] lg:w-[5rem]"></div>
+      
+  <div className="relative flex justify-center w-full">
+  <div
+    className="w-[10rem] h-[1rem] border-[0.6rem] border-blue-500 rounded-l-3xl rounded-r-3xl opacity-65"
+    style={{
+      maxWidth: "90%", // Küçük ekranlar için genişlik sınırlaması
+      position: "absolute",
+      top: "-10.5rem", // Yükseklik kaymasını ayarlayın
+      left: "-0.1rem"
+    }}
+  ></div>
 </div>
+
+
+      
+      
+      </div>
 
       </div>
     </section>
