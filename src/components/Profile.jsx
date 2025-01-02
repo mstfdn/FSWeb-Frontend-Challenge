@@ -77,10 +77,8 @@ const Profile = () => {
               : "Hello, I'm Mustafa. My interest in software development started at a young age, and now I specialize in frontend development. I am always open to learning new technologies and developing projects. I am a team player and enjoy taking responsibility."}
           </p>
           <div
-  className="w-[5rem] h-[1rem] border-[0.6rem] border-blue-600 rounded-l-3xl rounded-r-3xl absolute translate-x-[-10rem] translate-y-[1.2rem] left-1/2 opacity-55 sm:w-[7rem] md:w-[9rem] lg:w-[5rem]"
-  style={{
-    maxWidth: "90%", // Küçük ekranlar için genişlik sınırlaması
-  }}
+  className="sm:hidden md:hidden lg:block w-[5rem] h-[1rem] border-[0.6rem] border-blue-600 rounded-l-3xl rounded-r-3xl absolute translate-x-[-10rem] translate-y-[1.2rem] left-1/2 opacity-55 sm:w-[7rem] md:w-[9rem] lg:w-[5rem]"
+  
 ></div>
         </div>
       </div>
