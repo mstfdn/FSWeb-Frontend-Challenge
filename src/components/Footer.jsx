@@ -25,7 +25,7 @@ const Footer = () => {
     </>
   )}
   <div
-    className={`w-[15rem] h-4 opacity-65 ${darkMode ? "bg-blue-400" : "bg-blue-600"} rounded-full mx-auto`}
+    className={`w-[18rem] h-4 opacity-65 ${darkMode ? "bg-blue-400" : "bg-blue-600"} rounded-full mx-auto`}
     style={{
       marginTop: "-1%",
       transform: "translateX(15%) translateY(-700%)", // Bu değeri değiştirerek sağa veya sola hareket ettirebilirsiniz
