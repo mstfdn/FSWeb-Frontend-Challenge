@@ -55,8 +55,8 @@ const Skills = () => {
           </div>
           
         ))}
-        <div className="z-20 w-[9rem] h-[9rem] border-[1.5rem]  rounded-full translate-x-[87rem] translate-y-[-20rem] border-pink-500 dark:border-zinc-600"></div>
-        <div className="w-[10rem] h-[1rem] border-[1.5rem]  border-gray-600 rounded-r-3xl translate-x-[-17.5rem] translate-y-[4rem]"></div>
+        <div className="z-20 w-[9rem] h-[9rem] border-[1.5rem]  rounded-full translate-x-[120rem] translate-y-[-22rem] border-gray-300 dark:border-zinc-600"></div>
+        <div className="w-[10rem] h-[1rem] border-[1.5rem]  border-gray-600 rounded-r-3xl translate-x-[-33rem] translate-y-[4rem]"></div>
         
       </div>
       

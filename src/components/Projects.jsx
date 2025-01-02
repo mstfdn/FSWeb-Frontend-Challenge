@@ -174,10 +174,12 @@ const ProjectCard2 = () => {
       <img
         src={projectPhoto2}
         alt="Serenity Cafe"
-        className="absolute z-10 object-contain transform -translate-y-7"
+        className="absolute bg-black z-10 object-contain transform -translate-y-7"
         style={{
           maxWidth: "70%", // Fotoğraf genişliğini sınırla
-          maxHeight: "70%", // Fotoğraf yüksekliğini sınırla
+          maxHeight: "100%", // Fotoğraf yüksekliğini sınırla
+          width: "310px",   // Genişlik orantılı kalsın
+          height: "178px",  // Yükseklik orantılı kalsın
         }}
       />
     </div>
