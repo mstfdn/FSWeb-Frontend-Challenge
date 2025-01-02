@@ -28,6 +28,7 @@ const Skills = () => {
         darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black "
       }`}
     >
+      
       <h2
         className={`text-3xl font-bold text-center mb-8 ${
           darkMode ? "text-white" : "text-black"
@@ -52,8 +53,12 @@ const Skills = () => {
             />
             <p className="text-center font-medium">{skill.name}</p>
           </div>
+          
         ))}
+        <div className="z-20 w-[9rem] h-[9rem] border-[1.5rem]  rounded-full translate-x-[89rem] translate-y-[-4.5rem] border-gray-300 dark:border-zinc-600"></div>
+        <div className="w-[10rem] h-[1rem] border-[1.5rem]  border-gray-700 rounded-r-3xl translate-x-[-2.5rem] translate-y-[-1rem]"></div>
       </div>
+      
     </section>
   );
 };

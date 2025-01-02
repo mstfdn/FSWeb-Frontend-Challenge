@@ -14,7 +14,7 @@ const ProjectCard1 = ({ title, description, tags, githubLink, appLink }) => {
 
   return (
     <div
-      className={`p-6 rounded-lg shadow-md flex flex-col items-center ${
+      className={`p-6 rounded-lg shadow-md flex flex-col items-center  ${
         darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
       }`}
     >

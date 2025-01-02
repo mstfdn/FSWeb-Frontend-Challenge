@@ -36,6 +36,8 @@ function App() {
 
   return (
     <div className="container mx-auto p-6">
+      <div className="z-10 w-[8.35rem] h-[5rem] rounded-b-[5rem] translate-x-[35rem] bg-violet-500"></div>
+      
       <ThemeProvider>
         <LanguageProvider>
           <Anasayfa />
