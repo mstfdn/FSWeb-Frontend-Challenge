@@ -47,8 +47,11 @@ const Skills = () => {
             <p className="text-center font-medium">{skill.name}</p>
           </div>
         ))}
-        <div className="w-[10rem] h-[1rem] border-[1.5rem] border-pink-500 rounded-r-3xl translate-x-[-2.5rem] translate-y-[2rem]"></div>
+        <div className="w-[10rem] h-[1rem] border-[1.6rem] border-pink-500 rounded-r-3xl translate-x-[-2.5rem] translate-y-[2rem]"></div>
       </div>
+     
+
+
     </section>
   );
 };
