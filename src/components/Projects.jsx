@@ -28,7 +28,7 @@ function Projects() {
             return (
               <div
                 key={project.id}
-                className={`bg-gradient-to-r from-blue-100 to-blue-300 shadow-lg rounded-lg w-[350px] overflow-hidden transform transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-gray-800' : ''}`}
+                className={` from-blue-100 to-blue-300 shadow-lg rounded-lg w-[350px] overflow-hidden transform transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-gray-800' : ''}`}
               >
                 <div className="relative h-64">
                   <img

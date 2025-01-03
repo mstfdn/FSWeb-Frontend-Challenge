@@ -5,7 +5,7 @@
     "title-tr": "Pizza Projesi",
     "description-en": "A dynamic pizza ordering system with customization options.",
     "description-tr": "Özelleştirme seçenekleriyle dinamik bir pizza sipariş sistemi.",
-    "tags": ["React", "Styled Components", "JavaScript"],
+    "tags": ["React", "Tailwind CSS", "JavaScript"],
     "githubLink": "https://github.com/mstfdn/fsweb-s8-challenge-pizza",
     "appLink": "https://teknolojik-yemekler.vercel.app/",
     "images": [

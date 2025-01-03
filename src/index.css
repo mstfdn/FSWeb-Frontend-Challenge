@@ -2,23 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .responsive-profile-pic {
-    width: 16rem; /* Varsayılan genişlik */
-    height: 16rem; /* Varsayılan yükseklik */
-  }
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@400;600&display=swap');
 
-  @media (max-width: 768px) {
-    .responsive-profile-pic {
-      width: 12rem; /* Küçük ekranlar için genişlik */
-      height: 12rem; /* Küçük ekranlar için yükseklik */
-    }
-  }
-}
-
-
+/* Root Styles */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Montserrat fontu paragraflar için */
+  --font-montserrat: 'Montserrat', sans-serif;
+
+  /* Poppins fontu başlıklar için */
+  --font-poppins: 'Poppins', sans-serif;
+
+  font-family: var(--font-montserrat);
   line-height: 1.5;
   font-weight: 400;
 
@@ -32,13 +27,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
+/* Başlıklar için Poppins fontu */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins);
+  font-weight: 600; /* Başlıklar için kalın font */
+}
+
+/* Paragraflar ve linkler için Montserrat fontu */
+p, a {
+  font-family: var(--font-montserrat);
+  font-weight: 400; /* Paragraflar için normal ağırlık */
+}
+
+/* Link Styling */
 a {
   font-weight: 500;
   color: #646cff;
@@ -48,7 +56,7 @@ a:hover {
   color: #535bf2;
 }
 
-
+/* Body Styling */
 body {
   margin: 0;
   padding: 0;
@@ -56,13 +64,7 @@ body {
   height: 100%;
 }
 
-
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
+/* Button Styling */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -82,14 +84,17 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Light Mode Adjustments */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
