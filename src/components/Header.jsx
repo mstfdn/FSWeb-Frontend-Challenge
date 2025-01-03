@@ -84,8 +84,15 @@ const SocialIcons = styled.div`
     height: 2.5rem;
     border-radius: 0.5rem;
     filter: ${({ darkMode }) => (darkMode ? "brightness(0) invert(1)" : "none")};
+    transition: opacity 0.3s ease; 
+  }
+
+  img:hover {
+    opacity: 0.7; /* Hover durumunda opaklık azalır */
+    transform: scale(1.1); /* Hover durumunda logo biraz büyür */
   }
 `;
+
 
 const SwitchText = styled.span`
   font-size: 0.875rem;
