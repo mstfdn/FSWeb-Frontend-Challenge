@@ -136,13 +136,15 @@ const Header = () => {
           <SwitchText darkMode={darkMode} onClick={toggleLanguage}>
             {language === "en" ? (
               <>
-                <span className="text-pink-500">Türkçe</span>
-                <span>'ye Geç</span>
+                <span>Switch to </span>
+                <span className="text-pink-500">Turkish</span>
+                
               </>
             ) : (
               <>
-                <span>Switch to </span>
-                <span className="text-pink-500">English</span>
+                <span className="text-pink-500">İngilizce</span>
+                <span>'ye geç </span>
+                
               </>
             )}
           </SwitchText>
