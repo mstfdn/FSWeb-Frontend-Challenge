@@ -12,13 +12,13 @@ const Profile = () => {
       }`}
     >
       <div
-        className={`flex flex-col md:flex-row w-full md:w-2/3 gap-8`}
+        className={`flex flex-col justify-center md:flex-row w-full md:w-2/3 gap-24`}
       >
         {/* Profil Bilgileri */}
         <div
           className={`flex flex-col w-full md:w-1/3 p-6 md:ml-24 rounded-lg border-2 ${
           darkMode ? "bg-gray-700 text-white" : "bg-white text-black"
-            } shadow-lg shadow-[5px_5px_10px_rgba(0,0,0,0.75)]`}
+            } shadow-lg shadow-[5px_5px_10px_rgba(0,0,0,0.95)]`}
         >
 
           <h2 className="text-2xl font-bold mb-2">
