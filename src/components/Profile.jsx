@@ -17,9 +17,10 @@ const Profile = () => {
         {/* Profil Bilgileri */}
         <div
           className={`flex flex-col w-full md:w-1/3 p-6 md:ml-24 rounded-lg border-2 ${
-          darkMode ? "bg-gray-700 text-white" : "bg-white text-black"
-            } shadow-lg shadow-[5px_5px_10px_rgba(0,0,0,0.95)]`}
+          darkMode ? "bg-gray-700 text-white border-gray-600" : "bg-white text-black border-gray-300"
+          } shadow-lg shadow-[5px_5px_10px_rgba(0,0,0,0.95)]`}
         >
+
 
           <h2 className="text-2xl font-bold mb-2">
             {language === "tr" ? "Profil" : "Profile"}

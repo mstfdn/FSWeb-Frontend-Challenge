@@ -15,7 +15,7 @@
   {
     "id": 2,
     "title-en": "Serenity Cafe",
-    "title-tr": "Serenity Kafesi",
+    "title-tr": "Serenity Kafe",
     "description-en": "A simple café website built with React and Router.",
     "description-tr": "React ve Router ile yapılmış basit bir kafe web sitesi.",
     "tags": ["React", "Router", "JavaScript"],
