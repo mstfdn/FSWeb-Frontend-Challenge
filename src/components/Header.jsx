@@ -144,17 +144,7 @@ const Header = () => {
               )}
           </p>
         </div>
-        <div
-  className={`w-[10rem] h-[3rem] ${darkMode ? "bg-pink-500" : "bg-pink-600"} rounded-lg mx-auto`}
-  style={{
-    position: "relative", // Sabit konumda tutmak için fixed
-    top: "10%", // Sayfanın üst kısmına göre mesafe
-    left: "50%", // Sayfanın tam ortasında
-    transform: "translateX(-40%) translateY(-500%)", // Tam ortada olması için
-    marginTop: "-1%",
-    zIndex: 10, // Diğer öğelerin üstünde görünmesini sağlamak için
-  }}
-/>
+        
 
 
 
