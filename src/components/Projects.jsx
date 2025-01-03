@@ -1,234 +1,88 @@
-/* eslint-disable react/prop-types */
-import { useTheme } from "../context/ThemeContext";
-import { useLanguage } from "../context/LanguageContext";
-import data from "../data";
-import PropTypes from "prop-types";
+import { useContext, useEffect, useState } from "react";
+import { LanguageContext } from "../context/LanguageContext";
+import projectsData from '../dataJSON/projectsData.json';
 import projectPhoto from "../assets/pizza.png";
 import projectPhoto2 from "../assets/proje2.png";
-import laptopImage from "../assets/laptop.png";
 
+function Projects() {
+  const [projects, setProjects] = useState([]);
+  const { language } = useContext(LanguageContext);
 
-const ProjectCard1 = ({ title, description, tags, githubLink, appLink }) => {
-  const { darkMode } = useTheme();
-  const { language } = useLanguage();
-
-  return (
-    <div
-      className={`p-6 rounded-lg shadow-md flex flex-col items-center  ${
-        darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
-      }`}
-    >
-      {/* Proje Başlığı */}
-      <h3 className={`text-xl font-semibold mb-2 ${darkMode ? "text-white" : "text-black"}`}>
-        {title}
-      </h3>
-      {/* Proje Açıklaması */}
-      <p className={`mb-4 ${darkMode ? "text-gray-300" : "text-gray-700"}`}>{description}</p>
-      {/* Kullanılan Teknolojiler */}
-      <div className="flex space-x-2 mb-4">
-        {tags.map((tag, index) => (
-          <span
-            key={index}
-            className={`text-sm py-1 px-3 rounded-full ${
-              darkMode ? "bg-gray-700 text-gray-300" : "bg-gray-300 text-black"
-            }`}
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-      {/* GitHub Linki */}
-      <div className={`text-lg font-bold mb-2 ${darkMode ? "text-white" : "text-black"}`}>
-        <a href={githubLink} target="_blank" rel="noopener noreferrer">
-          {language === "tr" ? "GitHub'da Gör" : "View on GitHub"}
-        </a>
-      </div>
-      {/* Go to App Link */}
-      <div className="flex items-center space-x-2 mb-4">
-        <a
-          href={appLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`font-bold ${darkMode ? "text-blue-300" : "text-blue-500"}`}
-        >
-          {language === "tr" ? "Uygulamaya Git →" : "Go to app →"}
-        </a>
-      </div>
-      {/* Laptop ekranı içinde proje fotoğrafı */}
-<div className={`w-full h-80 bg-gray-200 flex justify-center items-center rounded-lg overflow-hidden relative
-  ${
-    darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
-  }`}>
-  {/* Laptop ekranı */}
-  <div className={`w-[90%] h-[80%] bg-gray-200 rounded-md relative flex justify-center items-center
-  ${
-    darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
-  }`}>
-    {/* İçerik grubu */}
-    <div className="relative w-full h-full flex items-center justify-center">
-      {/* Laptop Image */}
-      <img
-        src={laptopImage}
-        alt="Laptop Image"
-        className="absolute w-full h-full object-contain"
-        style={{
-          maxWidth: "100%", // Görselin taşmasını önlemek için maksimum genişlik
-          maxHeight: "100%", // Görselin taşmasını önlemek için maksimum yükseklik
-        }}
-      />
-      {/* Project Photo */}
-      <img
-        src={projectPhoto}
-        alt={title}
-        className="absolute z-10 object-contain transform -translate-y-7"
-        style={{
-          maxWidth: "70%", // Fotoğraf genişliğini sınırla
-          maxHeight: "70%", // Fotoğraf yüksekliğini sınırla
-        }}
-      />
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-    </div>
-  );
-};
-
-const ProjectCard2 = () => {
-  const { darkMode } = useTheme();
-  const { language } = useLanguage();
+  useEffect(() => {
+    setProjects(projectsData);
+  }, []);
 
   return (
-    <div
-      className={`p-6 rounded-lg shadow-md flex flex-col items-center ${
-        darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
-      }`}
-    >
-      <h3 className={`text-xl font-semibold mb-2 ${darkMode ? "text-white" : "text-black"}`}>
-      Serenity Cafe
-      </h3>
-      <p className={`mb-4 ${darkMode ? "text-gray-300" : "text-gray-700"}`}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-      <div className="flex space-x-2 mb-4">
-        <span
-          className={`text-sm py-1 px-3 rounded-full ${
-            darkMode ? "bg-gray-700 text-gray-200" : "bg-gray-300 text-black"
-          }`}
-        >
-          React
-        </span>
-        <span
-          className={`text-sm py-1 px-3 rounded-full ${
-            darkMode ? "bg-gray-700 text-gray-200" : "bg-gray-300 text-black"
-          }`}
-        >
-          Router
-        </span>
-      </div>
-      <div className={`text-lg font-bold mb-2 ${darkMode ? "text-white" : "text-black"}`}>
-        <a href="https://github.com/project3" target="_blank" rel="noopener noreferrer">
-          {language === "tr" ? "GitHub'da Gör" : "View on GitHub"}
-        </a>
-      </div>
-      <div className="flex items-center space-x-2 mb-4">
-        <a
-          href="https://app-link.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`font-bold ${darkMode ? "text-blue-300" : "text-blue-500"}`}
-        >
-          {language === "tr" ? "Uygulamaya Git →" : "Go to app →"}
-        </a>
-      </div>
-      <div className={`w-full h-80 bg-gray-200 flex justify-center items-center rounded-lg overflow-hidden relative
-  ${
-    darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
-  }`}>
-        
-  {/* Laptop ekranı */}
-  <div className={`w-[90%] h-[80%] bg-gray-200 rounded-md relative flex justify-center items-center
-  ${
-    darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
-  }`}>
-    {/* İçerik grubu */}
-    <div className="relative w-full h-full flex items-center justify-center">
-      {/* Laptop Image */}
-      <img
-        src={laptopImage}
-        alt="Laptop Image"
-        className="absolute w-full h-full object-contain"
-        style={{
-          maxWidth: "100%", // Görselin taşmasını önlemek için maksimum genişlik
-          maxHeight: "100%", // Görselin taşmasını önlemek için maksimum yükseklik
-        }}
-      />
-      {/* Project Photo */}
-      <img
-        src={projectPhoto2}
-        alt="Serenity Cafe"
-        className="absolute bg-black z-10 object-contain transform -translate-y-7"
-        style={{
-          maxWidth: "70%", // Fotoğraf genişliğini sınırla
-          maxHeight: "100%", // Fotoğraf yüksekliğini sınırla
-          width: "310px",   // Genişlik orantılı kalsın
-          height: "178px",  // Yükseklik orantılı kalsın
-        }}
-      />
-    </div>
-  </div>
-</div>
+    <section className="py-16">
+      <h4 className="text-4xl font-semibold text-center text-blue-700 dark:text-white mb-10">
+        {language === "en" ? "Projects" : "Projeler"}
+      </h4>
+      <div className="flex flex-wrap justify-center gap-10">
+        {Array.isArray(projects) && projects.length > 0 ? (
+          projects.map((project) => {
+            const projectImage =
+              project.id === 1 ? projectPhoto : projectPhoto2;
 
-    </div>
-  );
-};
-
-const Projects = () => {
-  const { darkMode } = useTheme();
-  const { language } = useLanguage();
-
-  return (
-    <section
-      id="projects"
-      className={`py-12 ${darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"}`}
-    >
-      <div className="container mx-auto px-4">
-        <h2 className={`text-3xl font-bold text-center mb-8 ${darkMode ? "text-white" : "text-black"}`}>
-          {language === "tr" ? "Projeler" : "Projects"}
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {data.projects.map((project, index) => (
-            <ProjectCard1
-              key={index}
-              title={project.title}
-              description={project.description}
-              tags={project.tags}
-              githubLink={project.links.github}
-              appLink={project.links.app}
-              image={project.image || projectPhoto} // Varsayılan proje fotoğrafı ekleniyor
-            />
-          ))}
-          <ProjectCard2 />
-        </div>
+            return (
+              <div
+                key={project.id}
+                className="bg-gradient-to-r from-blue-100 to-blue-300 shadow-lg rounded-lg w-[350px] overflow-hidden transform transition-all duration-300 hover:scale-105"
+              >
+                <div className="relative h-64">
+                  <img
+                    className="absolute inset-0 w-full h-full object-cover"
+                    src={projectImage}
+                    alt={project.title}
+                  />
+                  <div className="absolute inset-0 bg-black opacity-30"></div>
+                </div>
+                <div className="p-6 bg-white dark:bg-gray-700 rounded-b-lg">
+                  <h5 className="text-xl font-semibold text-blue-800 dark:text-white">
+                    {language === "en" ? project["title-en"] : project["title-tr"]}
+                  </h5>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                    {language === "en"
+                      ? project["description-en"]
+                      : project["description-tr"]}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className="bg-blue-600 text-white rounded-full px-3 py-1 text-xs hover:bg-blue-700 hover:cursor-pointer"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex justify-between mt-6">
+                    <a
+                      className="text-blue-700 font-semibold hover:underline dark:text-white"
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {language === "en" ? "GitHub" : "GitHub"} &rarr;
+                    </a>
+                    <a
+                      className="text-blue-700 font-semibold hover:underline dark:text-white"
+                      href={project.appLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {language === "en" ? "App" : "Uygulama"} &rarr;
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })
+        ) : (
+          <p>No projects available.</p>
+        )}
       </div>
     </section>
   );
-};
-
-Projects.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-  githubLink: PropTypes.string.isRequired,
-  appLink: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-};
+}
 
 export default Projects;

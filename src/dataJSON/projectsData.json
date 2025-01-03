@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "title-en": "Pizza Project",
+    "title-tr": "Pizza Projesi",
+    "description-en": "A dynamic pizza ordering system with customization options.",
+    "description-tr": "Özelleştirme seçenekleriyle dinamik bir pizza sipariş sistemi.",
+    "tags": ["React", "Styled Components", "JavaScript"],
+    "githubLink": "https://github.com/mstfdn/fsweb-s8-challenge-pizza",
+    "appLink": "https://teknolojik-yemekler.vercel.app/",
+    "images": [
+      "../assets/pizza.png"
+    ]
+  },
+  {
+    "id": 2,
+    "title-en": "Serenity Cafe",
+    "title-tr": "Serenity Kafesi",
+    "description-en": "A simple café website built with React and Router.",
+    "description-tr": "React ve Router ile yapılmış basit bir kafe web sitesi.",
+    "tags": ["React", "Router", "JavaScript"],
+    "githubLink": "https://github.com/yourusername/serenity-cafe",
+    "appLink": "https://serenitycafe.com",
+    "images": [
+      "../assets/proje2.png"
+    ]
+  }
+]
